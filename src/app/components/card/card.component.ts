@@ -22,8 +22,6 @@ export class CardComponent implements OnInit {
 
   @Input() set classes(value:string){
     this._classes = 'card';
-
-    console.log(this._classes);
     
     if(value.trim() != ''){
       this._classes = `${this._classes} ${value}`;
