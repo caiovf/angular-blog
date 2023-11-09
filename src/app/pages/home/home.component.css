@@ -1,0 +1,126 @@
+.news {
+    margin-bottom: 50px;
+}
+
+.news .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.news .section-content .left-content,
+.news .section-content .right-content{
+    width: 100%;
+}
+
+.news .section-content .right-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.news .section-content .right-content app-card + app-card{
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 2px solid rgba(255,255,255,.1);
+}
+
+.author-news {
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.author-news .section-header {
+    margin-bottom: 25px;
+}
+
+.author-news .section-content {
+    display: flex;    
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.author-news .section-content app-card {
+    width: 100%;
+}
+
+.author-news .section-content app-card + app-card{
+    position: relative;
+}
+
+.author-news .section-content app-card + app-card:before{
+    content: '';
+    position: absolute;
+    top: -28px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f6f6f6;
+}
+
+@media (min-width: 480px) {
+
+    .news .section-content .right-content app-card + app-card{
+        margin-top: 32px;
+        padding-top: 32px;
+    }
+    
+    .author-news .section-content app-card {
+        width: calc( 100% / 2 - 24px);
+    }
+
+    .author-news .section-content app-card + app-card:before{        
+        top: 0;
+        left: -16px;
+        width: 2px;        
+        height: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    
+    .news .section-content {        
+        flex-wrap: nowrap;
+        gap: 50px;
+    }
+    
+    .news .section-content .left-content,
+    .news .section-content .right-content{
+        width: 50%;
+    }
+
+    .author-news .section-content app-card {
+        width: calc( 100% / 4 - 24px);
+    }
+}
+
+
+@media (min-width: 1400px) {
+
+    .news {
+        margin-bottom: 110px;
+    }
+
+    .news .section-content {        
+        gap: 100px;
+    }
+
+    .author-news {
+        padding: 79px 0;
+    }
+    
+    .author-news .section-header {
+        margin-bottom: 55px;
+    }
+
+    .author-news .section-content {        
+        gap: 64px;
+    }
+    
+    .author-news .section-content app-card {
+        width: calc( 100% / 4 - 48px);
+    }
+
+    .author-news .section-content app-card + app-card:before{
+        left: -32px;        
+    }
+}

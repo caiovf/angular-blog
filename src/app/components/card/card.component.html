@@ -1,0 +1,16 @@
+<a [ngClass]="_classes" href="">
+    <div class="box-img">
+        <img 
+            class="img-{{img_type}}"
+            src="{{img_src}}"
+            width="{{img_width}}"
+            height="{{img_height}}"
+            alt="{{img_alt}}"
+        >
+    </div>
+    <div class="box-text">        
+        <time>{{card_date}}</time>
+        <h3>{{card_title}}</h3>
+        <p *ngIf="card_description">{{card_description}}</p>
+    </div>
+</a>

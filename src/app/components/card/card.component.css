@@ -1,0 +1,160 @@
+.card .box-text {
+    padding: 20px 0;
+    transition: padding 350ms;
+}
+
+.card .box-text time{
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.card h3{
+    font-size: 20px;
+    line-height: 1.1em;
+}
+
+.card h3 + p {
+    margin-top: 10px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.card .box-img {    
+    overflow: hidden;
+}
+
+.card .box-img img {
+    transition: transform 350ms;
+}
+
+/* CARD GRANDE */
+.card.lg time{
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.card.lg h3{
+    font-size: 26px;
+    line-height: 1.1em;
+}
+
+.card.lg p {
+    font-size: 16px;
+    line-height: 1.25em;
+}
+
+/* CARD HORIZONTAL */
+
+.card.horizontal {
+    display: flex;    
+    transition: background 350ms;
+}
+
+.card.horizontal .box-img {
+    width: 40%;
+    flex-shrink: 0;
+}
+
+.card.horizontal .box-text {
+    padding: 10px 15px;
+    transition: padding 350ms;
+}
+
+.card.horizontal h3{
+    font-size: 18px;
+}
+
+/* CARD HOVER */
+
+.card:hover .box-img img {
+    transform: scale(1.1);
+}
+
+.card.horizontal.white:hover {
+    background: #ffffff;
+}
+
+.card.horizontal.white:hover time,
+.card.horizontal.white:hover h3{
+    color: #3c3c3c;
+}
+
+.card.lg:hover time,
+.card.lg:hover h3,
+.card.lg:hover p{    
+    transform: translateX(30px);
+}
+
+.card.white:not(.horizontal):hover time,
+.card.white:not(.horizontal):hover h3,
+.card.white:not(.horizontal):hover p{
+    color: #ffffff;
+}
+
+/* CARD BRANCO */
+
+.card.white time,
+.card.white h3,
+.card.white p{
+    transition: color 350ms, transform 350ms;
+}
+
+.card.white time {
+    color: #3a3a3a;
+}
+
+.card.white h3{
+    color: #cfcfcf;
+}
+
+.card.white p {
+    color: #595959;
+}
+
+@media (min-width: 480px) {
+
+    .card.lg h3{
+        font-size: 30px;
+    }
+    
+    .card.lg p {
+        font-size: 16px;        
+    }
+
+    .card.horizontal .box-text {
+        padding: 10px 25px;
+    }
+
+    .card.horizontal h3{
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .card h3 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .card.lg h3{
+        font-size: 35px;
+    }
+
+    .card.lg p {
+        font-size: 20px;
+    }
+
+    .card.horizontal h3{
+        font-size: 26px;
+    }
+}

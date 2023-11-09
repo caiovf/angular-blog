@@ -1,0 +1,28 @@
+section {
+    margin-bottom: 35px;
+}
+
+h1 {
+    padding: 10px 0 15px;
+    border-top: 2px solid rgba(255,255,255,.1);
+    border-bottom: 2px solid rgba(255,255,255,.1);
+    font-weight: 900;
+    font-size: 55px;
+    line-height: 1.25em;
+    color: #ffffff;
+}
+
+@media (min-width: 768px) {
+ 
+    h1 {
+        padding: 10px 0 25px;
+        font-size: 100px;
+    }
+}
+
+@media (min-width: 992px) {
+ 
+    h1 {
+        font-size: 125px;        
+    }
+}
