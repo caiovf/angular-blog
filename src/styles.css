@@ -28,7 +28,7 @@
     font-style: normal;
 }
 
-* {
+*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

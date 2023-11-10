@@ -1,0 +1,22 @@
+<app-header></app-header>
+<app-page-title [title]="'Blog'"></app-page-title>
+<section class="archive-news">
+    <div class="container">
+        <div class="section-content">
+            <app-card 
+                *ngFor=" let item of posts"
+                img_src="../../../assets/card-lg.webp" 
+                img_width="645" 
+                img_height="396" 
+                img_alt=""
+                card_date="January 11, 2022"
+                card_title="Lorem ipsum dolor sit amet, consectetur adipiscing elit Suspendisse tincidunt"
+                card_description="Suspendisse tincidunt justo odio Donec gravida tellus sapien, sed lobortis risus suscipit quis. Pellentesque et dignissim ante, id luctus massa."
+                classes="lg white"
+            ></app-card>
+        </div>
+        <div class="section-footer">
+            <button class="loadmore" (click)="moreposts()">Carregar Mais</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,71 @@
+.page-banner {
+    position: relative;
+}
+
+.page-banner .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+}
+
+.page-banner .box-text {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 30px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,.9) 50%, rgba(96,175,75,0) 100%);
+}
+
+.page-banner .box-text h1,
+.page-banner .box-text p {
+    color: #ffffff;
+}
+
+.page-banner .box-text h1 {
+    margin: 0 0 15px;
+    font-size: 2rem;
+    line-height: 1.25em;
+}
+
+.page-banner .box-text p {
+    font-size: 1rem;
+}
+
+@media (min-width: 480px) {
+
+    .page-banner .box-text {
+        min-height: 500px;
+    }
+
+    .page-banner .box-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .page-banner {        
+        height: 70vh;
+    }
+
+    .page-banner .box-text {
+        padding: 30px 0;
+        background: linear-gradient(0deg, rgba(0,0,0,.9) 0%, rgba(96,175,75,0) 50%);
+    }
+
+    .page-banner .box-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .page-banner .box-text p {
+        max-width: 80%;
+        font-size: 1.25rem;
+    }
+}

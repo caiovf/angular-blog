@@ -2,15 +2,12 @@
     <div class="container">
         <div class="section-content">
             <div class="left-content">
-                <a href="/home" title="Blog">
-                    <img class="img-responsive" src="" alt="">
+                <a class="logo" [routerLink]="['']" title="Home">
+                    <span>Caio Ferreira</span>
                 </a>
                 <nav>
                     <ul>
-                        <li><a href="" title="Learn">Learn</a></li>
-                        <li><a href="" title="Blog">blog</a></li>
-                        <li><a href="" title="Bookmarks">Bookmarks</a></li>
-                        <li><a href="" title="Lain NYA">Lain NYa</a></li>
+                        <li><a [routerLink]="['/blog']" title="Blog">blog</a></li>
                     </ul>
                 </nav>
             </div>
@@ -27,8 +24,44 @@
                         </a>
                     </li>
                 </ul>
+                <button class="bt-icon" (click)="toggleMenu()">
+                    <img class="img-responsive" src="../../../assets/icon-menu.png" width="32" height="32" alt="">
+                </button>
             </div>
         </div>
-
+    </div>
+    <div class="menu-mobile" [class.active]="isMenuOpen">
+        <div class="box-header">
+            <button class="bt-icon" (click)="toggleMenu()">
+                <img class="img-responsive" src="../../../assets/close.png" width="32" height="32" alt="">
+            </button>
+        </div>
+        <div class="box-content">
+            <nav>
+                <ul>
+                    <li><a href="" title="Learn">Learn</a></li>
+                    <li><a [routerLink]="['/blog']" title="Blog">blog</a></li>
+                    <li><a href="" title="Bookmarks">Bookmarks</a></li>
+                    <li><a href="" title="Lain NYA">Lain NYa</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="box-footer">
+            <ul class="social-media">                                        
+                <li>
+                    <a title="Github" href="https://github.com/caiovf" target="_blank" rel="noopener noreferrer">
+                        <img class="img-responsive" src="../../../assets/github.png" width="32" height="32" alt="Icone Github">
+                    </a>
+                </li>
+                <li>
+                    <a title="Linkedin" href="https://linkedin.com/in/caio-ferreiradev" target="_blank" rel="noopener noreferrer">
+                        <img class="img-responsive" src="../../../assets/linkedin.png" width="32" height="32" alt="Icone Linkedin">
+                    </a>
+                </li>
+                <button class="bt-icon" (click)="toggleMenu()">
+                    <img class="img-responsive" src="../../../assets/icon-menu.png" width="32" height="32" alt="">
+                </button>
+            </ul>
+        </div>
     </div>
 </header>
