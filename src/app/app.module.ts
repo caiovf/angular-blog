@@ -3,28 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { PageTitleComponent } from './components/page-title/page-title.component';
-import { HomeComponent } from './pages/home/home.component';
-import { CardComponent } from './components/card/card.component';
-import { InternaBlogComponent } from './pages/interna-blog/interna-blog.component';
-import { BlogComponent } from './pages/blog/blog.component';
-import { BannerInternaComponent } from './components/banner-interna/banner-interna.component';
+
+import { PagesModule } from './pages/pages.module'
+import { SharedModule } from './shared/shared.module'
+import { ComponentsModule } from './components/components.module'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    PageTitleComponent,
-    HomeComponent,
-    CardComponent,
-    InternaBlogComponent,
-    BlogComponent,
-    BannerInternaComponent,
+    AppComponent,    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PagesModule,
+    SharedModule,
+    ComponentsModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]
