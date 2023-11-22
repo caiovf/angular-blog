@@ -10,13 +10,12 @@ const routes: Routes = [
     component:HomeComponent
   },
   {
-    path: 'blog',
-    component: BlogComponent
-  },
-  {
-    path: 'blog/:slug',
-    component: InternaBlogComponent
-  }
+    path: 'blog',    
+    children:[
+      { path: '', component: BlogComponent},
+      { path: ':slug', component: InternaBlogComponent}
+    ]
+  },  
 ];
 
 @NgModule({
